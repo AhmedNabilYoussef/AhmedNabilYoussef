@@ -1,29 +1,23 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أحمد نبيل - مهندس مدني</title>
-    <!-- Importing Premium Arabic Typography -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <title>Ahmed Nabil - Civil Engineer</title>
     <style>
         :root {
-            --primary: #0b1e33;
-            --primary-light: #163554;
-            --accent: #c49a45;
-            --accent-light: #f7f3eb;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
+            --primary: #0f2d4a;
+            --accent: #b89047;
+            --text-main: #222222;
+            --text-muted: #626d7a;
             --bg-card: #ffffff;
+            --bg-page: #f4f6f9;
             --border-color: #e2e8f0;
         }
 
         body {
-            font-family: 'Cairo', system-ui, -apple-system, sans-serif;
-            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-page);
             margin: 0;
             padding: 20px;
             display: flex;
@@ -38,75 +32,56 @@
             background-color: var(--bg-card);
             width: 100%;
             max-width: 440px;
-            border-radius: 24px;
-            box-shadow: 0 25px 50px -12px rgba(15, 30, 54, 0.08), 0 0 1px rgba(0, 0, 0, 0.05);
-            padding: 45px 35px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(15, 45, 74, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02);
+            padding: 40px 30px;
             box-sizing: border-box;
-            border: 1px solid rgba(255, 255, 255, 0.7);
-            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 30px 60px -15px rgba(15, 30, 54, 0.12), 0 0 2px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
         }
 
         .header {
             text-align: center;
-            margin-bottom: 35px;
-        }
-
-        .eng-badge {
-            display: inline-flex;
-            align-items: center;
-            background: var(--accent-light);
-            color: var(--accent);
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            padding: 4px 16px;
-            border-radius: 100px;
-            margin-bottom: 16px;
-            border: 1px solid rgba(196, 154, 69, 0.15);
+            margin-bottom: 32px;
         }
 
         h1 {
             color: var(--primary);
-            font-size: 28px;
-            font-weight: 800;
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin: 0 0 6px 0;
+        }
+
+        .title {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
             margin: 0 0 16px 0;
         }
 
-        .email-action {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            direction: ltr;
-            gap: 8px;
-            background-color: var(--primary);
-            color: #ffffff;
-            padding: 10px 24px;
-            border-radius: 12px;
-            font-size: 14px;
+        .contact-info {
+            display: inline-block;
+            background-color: var(--bg-page);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 13px;
             font-weight: 500;
+        }
+
+        .contact-info a {
+            color: var(--primary);
             text-decoration: none;
-            cursor: pointer;
-            transition: background-color 0.2s ease, transform 0.1s ease;
-            border: none;
-            width: 100%;
-            box-sizing: border-box;
+            transition: color 0.2s ease;
         }
 
-        .email-action:hover {
-            background-color: var(--primary-light);
-        }
-
-        .email-action:active {
-            transform: scale(0.98);
+        .contact-info a:hover {
+            color: var(--accent);
         }
 
         .section {
-            margin-bottom: 32px;
+            margin-bottom: 28px;
         }
 
         .section:last-of-type {
@@ -115,44 +90,42 @@
 
         .section-title {
             color: var(--primary);
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 700;
-            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 14px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
 
         .section-title::after {
             content: '';
             flex: 1;
             height: 1px;
-            background: linear-gradient(270deg, var(--border-color) 0%, rgba(226, 232, 240, 0) 100%);
+            background-color: var(--border-color);
         }
 
-        .credential-list {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
+        .item {
+            margin-bottom: 14px;
+            font-size: 13.5px;
+            line-height: 1.5;
         }
 
-        .credential-card {
-            border-right: 3px solid var(--accent);
-            padding-right: 14px;
-            border-left: none;
+        .item:last-child {
+            margin-bottom: 0;
         }
 
-        .credential-card strong {
+        .item strong {
             display: block;
             color: var(--primary);
-            font-size: 14px;
-            font-weight: 700;
+            font-weight: 600;
             margin-bottom: 2px;
         }
 
-        .credential-card span {
+        .item span {
             color: var(--text-muted);
-            font-size: 12.5px;
         }
 
         .grid {
@@ -162,50 +135,25 @@
         }
 
         .grid-item {
-            background-color: #f8fafc;
-            padding: 14px;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            transition: border-color 0.2s ease, background-color 0.2s ease;
-        }
-
-        .grid-item:hover {
-            border-color: #cbd5e1;
-            background-color: #f1f5f9;
+            background-color: var(--bg-page);
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.02);
         }
 
         .grid-item strong {
             display: block;
             color: var(--text-muted);
             font-size: 11px;
-            font-weight: 600;
-            margin-bottom: 6px;
-        }
-
-        .grid-item div {
-            font-size: 13.5px;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .education-card {
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-            padding: 16px;
-            border-radius: 14px;
-            border: 1px solid var(--border-color);
-        }
-
-        .education-card strong {
-            display: block;
-            color: var(--primary);
-            font-size: 14px;
-            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             margin-bottom: 4px;
         }
 
-        .education-card span {
-            color: var(--text-muted);
+        .grid-item div {
             font-size: 13px;
+            font-weight: 600;
+            color: var(--primary);
         }
     </style>
 </head>
@@ -213,71 +161,55 @@
 
     <div class="card">
         <div class="header">
-            <div class="eng-badge">مهندس مدني</div>
-            <h1>أحمد نبيل</h1>
-            <button class="email-action" onclick="copyEmail()">
-                <span>mypc1239@outlook.com</span>
-            </button>
-        </div>
-
-        <div class="section">
-            <div class="section-title">الاعتمادات المهنية</div>
-            <div class="credential-list">
-                <div class="credential-card">
-                    <strong>معهد المهندسين المدنيين (المملكة المتحدة)</strong>
-                    <span>عضو خريج (GMICE) • انضمام 2025</span>
-                </div>
-                <div class="credential-card">
-                    <strong>نقابة المهندسين المصرية</strong>
-                    <span>مهندس مسجل • نقابة الإسكندرية</span>
-                </div>
+            <h1>Ahmed Nabil</h1>
+            <div class="title">Civil Engineer</div>
+            <div class="contact-info">
+                <a href="mailto:mypc1239@outlook.com">mypc1239@outlook.com</a>
             </div>
         </div>
 
         <div class="section">
-            <div class="section-title">البرامج الهندسية</div>
+            <div class="section-title">Technical Credentials</div>
+            <div class="item">
+                <strong>Institution of Civil Engineers (United Kingdom)</strong>
+                <span>Graduate Member (GMICE) • Admitted 2025</span>
+            </div>
+            <div class="item">
+                <strong>Egyptian Syndicate of Engineers</strong>
+                <span>Registered Engineer • Alexandria Branch</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Software Proficiencies</div>
             <div class="grid">
                 <div class="grid-item">
-                    <strong>التحليل الإنشائي</strong>
+                    <strong>Structural Analysis</strong>
                     <div>Autodesk Robot</div>
                 </div>
                 <div class="grid-item">
-                    <strong>نمذجة معلومات البناء (BIM)</strong>
+                    <strong>BIM</strong>
                     <div>Revit Structure</div>
                 </div>
                 <div class="grid-item">
-                    <strong>الرسم الهندسي</strong>
+                    <strong>Drafting</strong>
                     <div>AutoCAD</div>
                 </div>
                 <div class="grid-item">
-                    <strong>إدارة المشاريع</strong>
+                    <strong>Project Management</strong>
                     <div>Primavera P6</div>
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <div class="section-title">التعليم</div>
-            <div class="education-card">
-                <strong>بكالوريوس هندسة التشييد والبناء</strong>
-                <span>الأكاديمية العربية للعلوم والتكنولوجيا والنقل البحري</span>
+            <div class="section-title">Education</div>
+            <div class="item">
+                <strong>B.Sc. Construction & Building Engineering</strong>
+                <span>Arab Academy for Science and Technology</span>
             </div>
         </div>
     </div>
-
-    <script>
-        function copyEmail() {
-            const email = 'mypc1239@outlook.com';
-            navigator.clipboard.writeText(email).then(() => {
-                const btnSpan = document.querySelector('.email-action span');
-                const originalText = btnSpan.innerText;
-                btnSpan.innerText = 'تم نسخ البريد الإلكتروني!';
-                setTimeout(() => {
-                    btnSpan.innerText = originalText;
-                }, 2000);
-            });
-        }
-    </script>
 
 </body>
 </html>
